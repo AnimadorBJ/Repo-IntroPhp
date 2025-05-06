@@ -6,20 +6,21 @@
     <title>Introduccion a php</title>
 </head>
 <body>
-    <h1>Pagina principal del sitio</h1>
-    <h2>Max Henriquez Pimiento</h2>
-    <!--Formulario de inicio de secion-->
-    <form action = "modelo/loguear.php" method = "post">
-        <h2>Iniciar Sesion</h2>
-        <label for="">E-mail:</label>  
-        <input type= "text" name="email" id="" required>  
-        <br><br>
+    <h1> Pagina principal del sitio <h1>
+    <h2> Max Henriquez Pimiento<h2>
+
+    <form action = "modelo/loguear.php"  method = "post">
+        <h3> Iniciar sesion <h3>
+        <label for="">E-mail:</label>
+        <input type= "text" name= "email" id="" require>
+        <br><br> 
         <label for="">Password:</label>
-        <input type= "text" name="password" id="" required>  
-        <br><br>
-        <button type = "submit">Ingresar</button>
+        <input type= "text" name= "password" id="" require>
+        <br><br> 
+        <button type ="submit"> Ingresar </button>
     </form>
-    <H2>usuario: maxhenriquez@colegioguanenta.edu.co</H2>
-    <H2>contraseña: 123456</H2>
+
+    <h2> Email: maxhenriquez@colegioguenta.edu.co<h2><br>
+    <h2> Contra:    <h2><br>
 </body>
 </html>

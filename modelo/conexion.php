@@ -1,35 +1,35 @@
 <?php
-    // scrip para crear una coneccion con la BD
+    // script para crear una conexión con la BD
 
-    // parametros requeridos para la coneccion con la BD
+    // Parametros requeridos para la conexión con la BD
 
-    // parametros para la BD local q
-    /*DEFINE('USER', 'root'); // Se Crea la constante USER con valor "root"
+    // Parametros BD local
+    DEFINE('USER', 'root'); //  Crea la constante USER con valor 'root'
     DEFINE('PW', '');
     DEFINE('HOST', 'localhost');
-    DEFINE('BD', 'Ejercicio 2 consultas SQL');*/
+    DEFINE('BD', 'Ejercicio 2 consultas SQL');
 
-    // parametro BD remoto(infinityfree)
-    DEFINE('USER', 'if0_38542111'); // Se Crea la constante USER con valor "if0_38542111"
+    // Parametros BD remota (infinityfree)
+    /*DEFINE('USER', 'if0_38542111'); //  Crea la constante USER con valor 'root'
     DEFINE('PW', 'mahepi0706');
     DEFINE('HOST', 'sql306.infinityfree.com');
-    DEFINE('BD', 'if0_38542111_bd_empresa');
+    DEFINE('BD', 'if0_38542111_bd_empresa');*/
 
-    // conexion con la BD
+    // Conexión con la BD
+    $conexion = mysqli_connect(HOST, USER, PW, BD); 
 
-    $conexion = mysqli_connect(HOST, USER, PW, BD);
+    // Establecer conjunto de caracteres para el hosting
+    mysqli_set_charset($conexion, 'utf8mb4'); 
 
-    // Establecer concunto de caracter para el hosting
-    mysqli_set_charset($conexion, "utf8mb4");
+    // Verificar la conexión con la BD
 
-    // verificar la conexion con la BD
-    if(!$conexion)
+if (!$conexion) 
     {
-        die('la conexion con la BD fallo: ' + mysqli_error($conexion));
+        die("La conexión con la BD falló: " + mysqli_error($conexion));  
         exit();
-    }
-    /*else
+    } 
+    /*else 
     {
-        die('Conexion exitosa a la BD exitosa!');
+        die("Conexión a la BD exitosa!"); 
     }*/
 ?>
